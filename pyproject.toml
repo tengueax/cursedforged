@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "cursedforged"
+version = "0.9.1"
+description = "CurseForge API Wrapper"
+authors = ["tengueax <tengueax@tutamail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+requests = "^2.32.3"
+pydantic = "^2.8.2"
+
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.11.2"
+pycodestyle = "^2.12.1"
+ruff = "^0.6.2"
+types-requests = "^2.32.0.20240712"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
