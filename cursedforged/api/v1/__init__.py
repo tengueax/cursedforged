@@ -339,9 +339,9 @@ class API_v1:
         Returns:
             GetModFilesResponse: A response object
         """
-        response = self.client.post(
+        response = self.client.get(
             "v1/mods/{}/files".format(mod_id),
-            data={
+            params={
                 "gameVersion": game_version,
                 "modLoaderType": mod_loader_type,
                 "gameVersionTypeId": game_version_type_id,
