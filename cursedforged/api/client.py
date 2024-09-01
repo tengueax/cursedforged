@@ -47,7 +47,7 @@ class APIClient(BaseAPIClient):
         Returns:
             str: The built URI.
         """
-        return "{}/{}/".format(self.base_url, endpoint.strip("/"))
+        return "{}/{}".format(self.base_url, endpoint.strip("/"))
 
     def get(self, endpoint: str, params: dict[str, Any] | None = None) -> Any:
         """Send a GET request to the specified endpoint.
