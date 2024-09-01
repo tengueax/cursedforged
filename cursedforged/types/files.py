@@ -33,7 +33,7 @@ class FileIndex(BaseModel):
     filename: str = Field(alias="filename")
     release_type: FileReleaseType = Field(alias="releaseType")
     game_version_type_id: int | None = Field(alias="gameVersionTypeId", default=None)
-    mod_loader: ModLoaderType = Field(alias="modLoader")
+    mod_loader: ModLoaderType | None = Field(alias="modLoader", default=None)
 
 
 class FileModule(BaseModel):
@@ -97,7 +97,7 @@ class File(BaseModel):
     file_size_on_disk: int | None = Field(
         alias="fileSizeOnDisk", description="The file's size on disk", default=None
     )
-    download_url: str = Field(alias="downloadUrl", description="The file download URL")
+    download_url: str | None = Field(alias="downloadUrl", description="The file download URL", default=None)
     game_versions: list[str] = Field(
         alias="gameVersions",
         description="List of game versions this file is relevant for",
