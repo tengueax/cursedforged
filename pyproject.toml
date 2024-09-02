@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "cursedforged"
-version = "0.9.3"
+version = "0.9.4"
 description = "CurseForge API Wrapper"
 authors = ["tengueax <tengueax@tutamail.com>"]
 readme = "README.md"
