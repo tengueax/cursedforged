@@ -70,7 +70,7 @@ class Mod(BaseModel):
     authors: list[ModAuthor] = Field(
         alias="authors", description="List of the mod's authors"
     )
-    logo: ModAsset = Field(alias="logo", description="The mod's logo asset")
+    logo: ModAsset | None = Field(alias="logo", description="The mod's logo asset", default=None)
     screenshots: list[ModAsset] = Field(
         alias="screenshots", description="List of screenshots assets"
     )
